@@ -1,5 +1,3 @@
-let taps = [];
-let tapImage;
 var video, standby, about, intercity, intracity, international, credits;
 var standbyEn, standbyEs, standbyCat;
 var aboutEn, aboutEs, aboutCat;
@@ -13,44 +11,43 @@ let b1, b2, b3, b0;
 var particles = [];
 
 function preload() {
-    taps[0] = loadImage('assets/imgs/tap.png')
-    taps[1] = loadImage('assets/imgs/tap2.png')
-    standbyEs = createVideo('assets/videos/StandbyEs.mp4');
-    standbyEn = createVideo('assets/videos/StandbyEn.mp4');
-    standbyCat = createVideo('assets/videos/StandbyCat.mp4');
+
+    standbyEs = createVideo('https://ticc.barcelona/icfo/assets/videos/StandbyEs.mp4');
+    standbyEn = createVideo('https://ticc.barcelona/icfo/assets/videos/StandbyEn.mp4');
+    standbyCat = createVideo('https://ticc.barcelona/icfo/assets/videos/StandbyCat.mp4');
     standby = standbyEn;
-    aboutEn = createVideo('assets/videos/AboutEn.mp4');
-    aboutEs = createVideo('assets/videos/AboutEs.mp4');
-    aboutCat = createVideo('assets/videos/AboutCat.mp4');
+    aboutEn = createVideo('https://ticc.barcelona/icfo/assets/videos/AboutEn.mp4');
+    aboutEs = createVideo('https://ticc.barcelona/icfo/assets/videos/AboutEs.mp4');
+    aboutCat = createVideo('https://ticc.barcelona/icfo/assets/videos/AboutCat.mp4');
     about = aboutEn;
-    intercityEn = createVideo('assets/videos/IntercityEn.mp4');
-    intercityEs = createVideo('assets/videos/IntercityEs.mp4');
-    intercityCat = createVideo('assets/videos/IntercityCat.mp4');
+    intercityEn = createVideo('https://ticc.barcelona/icfo/assets/videos/IntercityEn.mp4');
+    intercityEs = createVideo('https://ticc.barcelona/icfo/assets/videos/IntercityEs.mp4');
+    intercityCat = createVideo('https://ticc.barcelona/icfo/assets/videos/IntercityCat.mp4');
     intercity = intercityEn;
-    intracityEn = createVideo('assets/videos/IntracityEn.mp4');
-    intracityEs = createVideo('assets/videos/IntracityEs.mp4');
-    intracityCat = createVideo('assets/videos/IntracityCat.mp4');
+    intracityEn = createVideo('https://ticc.barcelona/icfo/assets/videos/IntracityEn.mp4');
+    intracityEs = createVideo('https://ticc.barcelona/icfo/assets/videos/IntracityEs.mp4');
+    intracityCat = createVideo('https://ticc.barcelona/icfo/assets/videos/IntracityCat.mp4');
     intracity = intracityEn;
-    internationalEn = createVideo('assets/videos/InternationalEn.mp4');
-    internationalEs = createVideo('assets/videos/InternationalEs.mp4');
-    internationalCat = createVideo('assets/videos/InternationalCat.mp4');
+    internationalEn = createVideo('https://ticc.barcelona/icfo/assets/videos/InternationalEn.mp4');
+    internationalEs = createVideo('https://ticc.barcelona/icfo/assets/videos/InternationalEs.mp4');
+    internationalCat = createVideo('https://ticc.barcelona/icfo/assets/videos/InternationalCat.mp4');
     international = internationalEn;
-    creditsEn = createVideo('assets/videos/CreditsEn.mp4');
-    creditsEs = createVideo('assets/videos/CreditsEs.mp4');
-    creditsCat = createVideo('assets/videos/CreditsCat.mp4');
+    creditsEn = createVideo('https://ticc.barcelona/icfo/assets/videos/CreditsEn.mp4');
+    creditsEs = createVideo('https://ticc.barcelona/icfo/assets/videos/CreditsEs.mp4');
+    creditsCat = createVideo('https://ticc.barcelona/icfo/assets/videos/CreditsCat.mp4');
     credits = creditsEn;
-    fontRegular = loadFont('assets/type/graphik/Graphik-Regular.otf');
-    fontItalic = loadFont('assets/type/graphik/Graphik-SemiboldItalic.otf');
-    fontBold = loadFont('assets/type/graphik/Graphik-Bold.otf');
-    b0 = loadImage('assets/imgs/0.png');
-    b1 = loadImage('assets/imgs/1.png');
-    b2 = loadImage('assets/imgs/2.png');
-    b3 = loadImage('assets/imgs/3.png');
+    fontRegular = loadFont('https://ticc.barcelona/icfo/assets/type/graphik/Graphik-Regular.otf');
+    fontItalic = loadFont('https://ticc.barcelona/icfo/assets/type/graphik/Graphik-SemiboldItalic.otf');
+    fontBold = loadFont('https://ticc.barcelona/icfo/assets/type/graphik/Graphik-Bold.otf');
+    b0 = loadImage('https://ticc.barcelona/icfo/assets/imgs/0.png');
+    b1 = loadImage('https://ticc.barcelona/icfo/assets/imgs/1.png');
+    b2 = loadImage('https://ticc.barcelona/icfo/assets/imgs/2.png');
+    b3 = loadImage('https://ticc.barcelona/icfo/assets/imgs/3.png');
 }
 
 let buttons = [];
 let cnv;
-let tap = false;
+
 
 function setup() {
     cnv = createCanvas(windowWidth, windowHeight);
